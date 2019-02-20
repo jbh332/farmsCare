@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guidelineL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.00" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guidelineR"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="1" />
+
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/LL0"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            app:layout_constraintTop_toBottomOf="@+id/ivUserState">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/ivMyPicture"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginLeft="16dp"
+                android:src="@drawable/common1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvNicName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:textColor="#000000"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/ivMyPicture"
+                app:layout_constraintLeft_toRightOf="@+id/ivMyPicture"
+                app:layout_constraintTop_toTopOf="@+id/ivMyPicture" />
+
+            <TextView
+                android:id="@+id/tvHeight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:textColor="#000000"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/tvNicName"
+                app:layout_constraintRight_toLeftOf="@+id/tvWeight"
+                app:layout_constraintTop_toTopOf="@+id/tvNicName" />
+
+            <TextView
+                android:id="@+id/tvWeight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="16dp"
+                android:textColor="#000000"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/tvHeight"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tvHeight" />
+
+            <TextView
+                android:id="@+id/tvNull"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/warningColor"
+                android:textSize="14sp"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginRight="16dp"
+                app:layout_constraintBottom_toBottomOf="@+id/tvNicName"
+                app:layout_constraintLeft_toRightOf="@+id/tvNicName"
+                app:layout_constraintTop_toTopOf="@+id/tvNicName" />
+
+        </android.support.constraint.ConstraintLayout>
+
+        <ImageView
+            android:id="@+id/ivUserState"
+            android:layout_width="match_parent"
+            android:layout_height="136dp"
+            android:background="@drawable/image_status"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/LL1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="@+id/guidelineL"
+            app:layout_constraintRight_toRightOf="@+id/guidelineR"
+            app:layout_constraintTop_toBottomOf="@+id/LL0">
+
+            <ImageView
+                android:id="@+id/ivUserWater"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:src="@drawable/image_water"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/ivUserSleep"
+                />
+
+            <ImageView
+                android:id="@+id/ivUserSleep"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:src="@drawable/image_sleeptime"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/ivUserWater"/>
+
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/LL2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="@+id/guidelineL"
+            app:layout_constraintRight_toRightOf="@+id/guidelineR"
+            app:layout_constraintTop_toBottomOf="@+id/LL1"
+            >
+
+            <ImageView
+                android:id="@+id/ivUserKcal"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:src="@drawable/image_calorie"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/LL6"/>
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/LL6"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                app:layout_constraintLeft_toRightOf="@+id/ivUserKcal"
+                app:layout_constraintRight_toRightOf="parent">
+
+                <ImageView
+                    android:id="@+id/ivUserSteps"
+                    android:layout_width="160dp"
+                    android:layout_height="160dp"
+                    android:src="@drawable/image_walk"
+                    />
+                <ProgressBar
+                    android:id="@+id/pBar"
+                    android:layout_width="160dp"
+                    android:layout_height="160dp"
+                    android:indeterminate="false"
+                    android:progressDrawable="@drawable/circular_progress_bar"
+                    android:background="@drawable/circle_shape"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:max="100"
+                    />
+
+                <TextView
+                    android:id="@+id/walkView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="35dp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    />
+
+            </android.support.constraint.ConstraintLayout>
+
+
+
+
+
+
+        </android.support.constraint.ConstraintLayout>
+
+
+
+    </android.support.constraint.ConstraintLayout>
+</layout>

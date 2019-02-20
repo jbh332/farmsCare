@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/tBar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#79ffffff"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="댓글 보기"
+                android:textColor="#000000"
+                android:textSize="20dp" />
+
+        </android.support.v7.widget.Toolbar>
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/srl"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/LL0"
+            app:layout_constraintTop_toBottomOf="@+id/tBar">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycleView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="vertical" />
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/LL0"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="#a7ffffff"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/iv2"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/common1"
+                app:civ_border_color="#FFFFFF"
+                app:civ_border_width="2dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvMyNicName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:textColor="#000000"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/iv2"
+                app:layout_constraintLeft_toRightOf="@+id/iv2"
+                app:layout_constraintTop_toTopOf="@+id/iv2" />
+
+            <EditText
+                android:id="@+id/etComment"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="5dp"
+                android:background="@null"
+                android:hint="댓글 달기..."
+                android:textColor="#767575"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/tvMyNicName"
+                app:layout_constraintLeft_toRightOf="@+id/tvMyNicName"
+                app:layout_constraintRight_toLeftOf="@+id/tvCommentRegister"
+                app:layout_constraintTop_toTopOf="@+id/tvMyNicName" />
+
+            <TextView
+                android:id="@+id/tvCommentRegister"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:text="게시"
+                android:textColor="@color/mainColor"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/etComment"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/etComment" />
+
+        </android.support.constraint.ConstraintLayout>
+
+
+    </android.support.constraint.ConstraintLayout>
+</layout>

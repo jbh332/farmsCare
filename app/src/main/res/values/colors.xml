@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<color name="colorPrimary">#3F51B5</color>
+<color name="colorPrimaryDark">#303F9F</color>
+<color name="colorAccent">#1ABC9C</color>
+<color name="mainColor">#add9dc</color>
+<color name="warningColor">#e43c4d</color>
+    <color name="graphColorMin">#91d384</color>
+    <color name="graphColorMax">#54a0cb</color>
+
+</resources>

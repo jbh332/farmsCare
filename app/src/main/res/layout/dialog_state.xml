@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:id="@+id/userStateDlg"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:src="@drawable/image_profile"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+        <TextView
+            android:id="@+id/waterState"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="충분한 수분 섭취를 하고 있습니다."
+            android:textSize="20dp"
+            android:textColor="#000000"
+            android:padding="10dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/userStateDlg" />
+
+        <TextView
+            android:id="@+id/sleepState"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="수면이 부족해요."
+            android:textSize="20dp"
+            android:textColor="#000000"
+            android:padding="10dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/waterState" />
+
+        <TextView
+            android:id="@+id/kcalState"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="식사량을 늘리세요!"
+            android:textSize="20dp"
+            android:textColor="#000000"
+            android:padding="10dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sleepState" />
+
+
+    </android.support.constraint.ConstraintLayout>
+</layout>

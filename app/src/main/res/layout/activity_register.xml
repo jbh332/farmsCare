@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/tBar"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="#add9dc">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:focusable="false"
+                    android:text="회원가입"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+            </android.support.v7.widget.Toolbar>
+
+            <android.support.constraint.Guideline
+                android:id="@+id/guideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_begin="76dp" />
+
+            <android.support.constraint.Guideline
+                android:id="@+id/guideline1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.3" />
+
+
+            <ImageView
+                android:id="@+id/ivCheckID"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="10dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_check_gray"
+                app:layout_constraintLeft_toRightOf="@+id/guidelineL"
+                app:layout_constraintTop_toBottomOf="@+id/guideline1" />
+
+            <TextView
+                android:id="@+id/tvID"
+                android:layout_width="50dp"
+                android:layout_height="0dp"
+                android:gravity="center_vertical"
+                android:text="아이디"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/ivCheckID"
+                app:layout_constraintLeft_toRightOf="@+id/ivCheckID"
+                app:layout_constraintTop_toTopOf="@+id/ivCheckID" />
+
+            <EditText
+                android:id="@+id/etID"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/border_underline"
+                android:hint="아이디를 입력하세요"
+                android:textSize="15sp"
+                app:layout_constraintLeft_toRightOf="@+id/tvID"
+                app:layout_constraintRight_toLeftOf="@+id/btnValidate"
+                app:layout_constraintTop_toBottomOf="@+id/guideline1" />
+
+            <Button
+                android:id="@+id/btnValidate"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/button_highlight"
+                android:text="중복체크"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toRightOf="@+id/etID"
+                app:layout_constraintRight_toLeftOf="@+id/guidelineR"
+                app:layout_constraintTop_toBottomOf="@+id/guideline1" />
+
+            <ImageView
+                android:id="@+id/ivCheckNicName"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="25dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_check_gray"
+                app:layout_constraintLeft_toRightOf="@+id/guidelineL"
+                app:layout_constraintTop_toBottomOf="@+id/etID" />
+
+            <TextView
+                android:id="@+id/tvNicName"
+                android:layout_width="50dp"
+                android:layout_height="0dp"
+                android:gravity="center_vertical"
+                android:text="닉네임"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/ivCheckNicName"
+                app:layout_constraintLeft_toRightOf="@+id/ivCheckNicName"
+                app:layout_constraintTop_toTopOf="@+id/ivCheckNicName" />
+
+            <EditText
+                android:id="@+id/etNicName"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/border_underline"
+                android:hint="닉네임을 입력하세요"
+                android:textSize="15sp"
+                app:layout_constraintLeft_toRightOf="@+id/tvNicName"
+                app:layout_constraintTop_toTopOf="@+id/tvNicName"
+                app:layout_constraintRight_toLeftOf="@+id/btnNicNameValidate"
+                app:layout_constraintBottom_toBottomOf="@+id/tvNicName"
+                />
+
+            <Button
+                android:id="@+id/btnNicNameValidate"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_highlight"
+                android:text="중복체크"
+                android:layout_marginLeft="20dp"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+                app:layout_constraintRight_toLeftOf="@+id/guidelineR"
+                app:layout_constraintTop_toTopOf="@+id/etNicName"
+                app:layout_constraintLeft_toRightOf="@+id/etNicName"
+                app:layout_constraintBottom_toBottomOf="@+id/etNicName"/>
+
+            <ImageView
+                android:id="@+id/ivCheckPassword"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="15dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_check_gray"
+                app:layout_constraintLeft_toRightOf="@+id/guidelineL"
+                app:layout_constraintTop_toBottomOf="@+id/etNicName" />
+
+            <TextView
+                android:id="@+id/tvPassword"
+                android:layout_width="70dp"
+                android:layout_height="0dp"
+                android:gravity="center_vertical"
+                android:text="비밀번호"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/ivCheckPassword"
+                app:layout_constraintLeft_toRightOf="@+id/ivCheckPassword"
+                app:layout_constraintTop_toTopOf="@+id/ivCheckPassword" />
+
+            <EditText
+                android:id="@+id/etPassword"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/border_underline"
+                android:hint="8자리 이상의 비밀번호"
+                android:inputType="textPassword"
+                android:text=""
+                android:textSize="15sp"
+                app:layout_constraintLeft_toRightOf="@+id/tvPassword"
+                app:layout_constraintRight_toLeftOf="@+id/guidelineR"
+                app:layout_constraintTop_toBottomOf="@+id/etNicName" />
+
+            <ImageView
+                android:id="@+id/ivCheckPassword2"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="15dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_check_gray"
+                app:layout_constraintLeft_toRightOf="@+id/guidelineL"
+                app:layout_constraintTop_toBottomOf="@+id/etPassword" />
+
+            <TextView
+                android:id="@+id/tvPassword2"
+                android:layout_width="70dp"
+                android:layout_height="0dp"
+                android:gravity="center_vertical"
+                android:text="재확인"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/ivCheckPassword2"
+                app:layout_constraintLeft_toRightOf="@+id/ivCheckPassword2"
+                app:layout_constraintTop_toTopOf="@+id/ivCheckPassword2" />
+
+            <EditText
+                android:id="@+id/etPassword2"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/border_underline"
+                android:hint="비밀번호를 다시 입력하세요"
+                android:inputType="textPassword"
+                android:text=""
+                android:textSize="15sp"
+                app:layout_constraintLeft_toRightOf="@+id/tvPassword2"
+                app:layout_constraintRight_toLeftOf="@+id/guidelineR"
+                app:layout_constraintTop_toBottomOf="@+id/etPassword" />
+
+            <ImageView
+                android:id="@+id/ivCheckQ"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="15dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_check_gray"
+                app:layout_constraintLeft_toRightOf="@+id/guidelineL"
+                app:layout_constraintTop_toBottomOf="@+id/etPassword2" />
+
+            <TextView
+                android:id="@+id/tvPWQuestion"
+                android:layout_width="150dp"
+                android:layout_height="0dp"
+                android:gravity="center_vertical"
+                android:text="비밀번호 찾기 질문"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/ivCheckQ"
+                app:layout_constraintLeft_toRightOf="@+id/ivCheckQ"
+                app:layout_constraintTop_toTopOf="@+id/ivCheckQ" />
+
+            <Spinner
+                android:id="@+id/spnPwQuestion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                app:layout_constraintLeft_toRightOf="@+id/guidelineL"
+                app:layout_constraintTop_toBottomOf="@+id/ivCheckQ"></Spinner>
+
+            <EditText
+                android:id="@+id/etPwAnswer"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/border_underline"
+                android:hint="비밀번호 찾기 질문"
+                android:inputType="text"
+                android:text=""
+                android:textSize="15sp"
+                app:layout_constraintLeft_toRightOf="@+id/guidelineL"
+                app:layout_constraintTop_toBottomOf="@+id/spnPwQuestion" />
+
+            <Button
+                android:id="@+id/btnRegister"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="50dp"
+                android:background="@drawable/button_highlight"
+                android:text="가입하기"
+                android:textColor="#ffffff"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toRightOf="@+id/guidelineL"
+                app:layout_constraintRight_toLeftOf="@+id/guidelineR"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="20dp"/>
+
+            <android.support.constraint.Guideline
+                android:id="@+id/guidelineL"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.07" />
+
+            <android.support.constraint.Guideline
+                android:id="@+id/guidelineR"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.93" />
+
+        </android.support.constraint.ConstraintLayout>
+
+</layout>

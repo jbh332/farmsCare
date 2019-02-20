@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginHorizontal="16dp"
+    android:background="@drawable/rounded">
+
+    <LinearLayout
+        android:id="@+id/LL0"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="30dp"
+        android:background="@color/mainColor"
+        android:orientation="vertical"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/dimen_16_dp"
+            android:layout_marginTop="16dp"
+            android:gravity="center_vertical"
+            android:text="변경할 비밀번호를 입력해주세요."
+            android:textColor="#FFFFFF"
+            android:textSize="17sp" />
+
+        <TextView
+            android:layout_width="300dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="16dp"
+            android:text="숫자와 대·소문자를 혼합해야 개인정보 보호에 도움이 됩니다."
+            android:textColor="#000000"
+            android:textSize="10sp" />
+    </LinearLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/LL1"
+        android:layout_width="0dp"
+        android:layout_height="160dp"
+        app:layout_constraintLeft_toLeftOf="@+id/LL0"
+        app:layout_constraintRight_toRightOf="@+id/LL0"
+        app:layout_constraintTop_toBottomOf="@+id/LL0">
+
+        <ImageView
+            android:id="@+id/ivCheckPassword"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="30dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_check_gray"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvPassword"
+            android:layout_width="70dp"
+            android:layout_height="0dp"
+            android:gravity="center_vertical"
+            android:text="비밀번호"
+            android:textColor="#000000"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/ivCheckPassword"
+            app:layout_constraintLeft_toRightOf="@+id/ivCheckPassword"
+            app:layout_constraintTop_toTopOf="@+id/ivCheckPassword" />
+
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/border_underline"
+            android:hint="8자리 이상의 비밀번호"
+            android:inputType="textPassword"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvPassword"
+            app:layout_constraintLeft_toRightOf="@+id/tvPassword"
+            app:layout_constraintRight_toRightOf="@+id/etPassword2"
+            app:layout_constraintTop_toTopOf="@+id/tvPassword" />
+
+        <ImageView
+            android:id="@+id/ivCheckPassword2"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="15dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_check_gray"
+            app:layout_constraintLeft_toLeftOf="@+id/ivCheckPassword"
+            app:layout_constraintTop_toBottomOf="@+id/etPassword" />
+
+        <TextView
+            android:id="@+id/tvPassword2"
+            android:layout_width="70dp"
+            android:layout_height="0dp"
+            android:gravity="center_vertical"
+            android:text="재확인"
+            android:textColor="#000000"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/ivCheckPassword2"
+            app:layout_constraintLeft_toRightOf="@+id/ivCheckPassword2"
+            app:layout_constraintTop_toTopOf="@+id/ivCheckPassword2" />
+
+        <EditText
+            android:id="@+id/etPassword2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/border_underline"
+            android:hint="비밀번호를 다시 입력하세요"
+            android:inputType="textPassword"
+            android:text=""
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvPassword2"
+            app:layout_constraintLeft_toRightOf="@+id/tvPassword2"
+            app:layout_constraintRight_toLeftOf="@+id/btnChange"
+            app:layout_constraintTop_toTopOf="@+id/tvPassword2" />
+
+        <Button
+            android:id="@+id/btnChange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:text="변경하기"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/tvPassword2"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvPassword2" />
+    </android.support.constraint.ConstraintLayout>
+
+
+</android.support.constraint.ConstraintLayout>

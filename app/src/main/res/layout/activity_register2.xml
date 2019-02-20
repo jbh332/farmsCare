@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/tBar"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="#add9dc">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:focusable="false"
+                android:text="정보 등록"
+                android:textColor="#FFFFFF"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+        </android.support.v7.widget.Toolbar>
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="76dp" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/civUserPicture"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_marginTop="50dp"
+            android:src="@drawable/common1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tBar" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="위의 이미지를 클릭하면 사진 등록을 할 수 있습니다."
+            android:textColor="@color/warningColor"
+            android:textSize="12sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/civUserPicture" />
+
+
+        <ImageView
+            android:id="@+id/ivCheckHeight"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="10dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_check_gray"
+            app:layout_constraintLeft_toRightOf="@+id/guidelineL"
+            app:layout_constraintTop_toBottomOf="@+id/guideline1" />
+
+        <TextView
+            android:id="@+id/tvHeight"
+            android:layout_width="50dp"
+            android:layout_height="0dp"
+            android:gravity="center_vertical"
+            android:text="키"
+            android:textColor="#000000"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/ivCheckHeight"
+            app:layout_constraintLeft_toRightOf="@+id/ivCheckHeight"
+            app:layout_constraintTop_toTopOf="@+id/ivCheckHeight" />
+
+        <EditText
+            android:id="@+id/etHeight"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/border_underline"
+            android:hint="본인의 키(cm)를 입력하세요"
+            android:inputType="number"
+            android:text=""
+            android:textSize="15sp"
+            app:layout_constraintLeft_toRightOf="@+id/tvHeight"
+            app:layout_constraintRight_toLeftOf="@id/guidelineR"
+            app:layout_constraintTop_toBottomOf="@+id/guideline1" />
+
+
+        <ImageView
+            android:id="@+id/ivCheckWeight"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="15dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_check_gray"
+            app:layout_constraintLeft_toRightOf="@+id/guidelineL"
+            app:layout_constraintTop_toBottomOf="@+id/etHeight" />
+
+        <TextView
+            android:id="@+id/tvWeight"
+            android:layout_width="50dp"
+            android:layout_height="0dp"
+            android:gravity="center_vertical"
+            android:text="몸무게"
+            android:textColor="#000000"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/ivCheckWeight"
+            app:layout_constraintLeft_toRightOf="@+id/ivCheckWeight"
+            app:layout_constraintTop_toTopOf="@+id/ivCheckWeight" />
+
+        <EditText
+            android:id="@+id/etWeight"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/border_underline"
+            android:hint="본인의 몸무게(Kg)를 입력하세요."
+            android:inputType="number"
+            android:text=""
+            android:textSize="15sp"
+            app:layout_constraintLeft_toRightOf="@+id/tvWeight"
+            app:layout_constraintRight_toLeftOf="@+id/guidelineR"
+            app:layout_constraintTop_toBottomOf="@+id/etHeight" />
+
+        <ImageView
+            android:id="@+id/ivCheckBirth"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="15dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_check_gray"
+            app:layout_constraintLeft_toRightOf="@+id/guidelineL"
+            app:layout_constraintTop_toBottomOf="@+id/etWeight" />
+
+        <TextView
+            android:id="@+id/tvBirth"
+            android:layout_width="80dp"
+            android:layout_height="0dp"
+            android:gravity="center_vertical"
+            android:text="나이"
+            android:textColor="#000000"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/ivCheckBirth"
+            app:layout_constraintLeft_toRightOf="@+id/ivCheckBirth"
+            app:layout_constraintTop_toTopOf="@+id/ivCheckBirth" />
+
+
+        <Spinner
+            android:id="@+id/spnYear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            app:layout_constraintLeft_toRightOf="@+id/tvBirth"
+            app:layout_constraintTop_toBottomOf="@+id/tvWeight"></Spinner>
+
+        <Button
+            android:id="@+id/btnRegister2"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/button_highlight"
+            android:text="등록하기"
+            android:textColor="#ffffff"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/guidelineL"
+            app:layout_constraintRight_toLeftOf="@+id/guidelineR" />
+
+        <LinearLayout
+            android:id="@+id/LL1"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toRightOf="@+id/guidelineL"
+            app:layout_constraintRight_toLeftOf="@+id/guidelineR"
+            app:layout_constraintTop_toBottomOf="@+id/ivCheckBirth">
+
+            <TextView
+                android:id="@+id/tvMale"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="남자"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/tvFemale"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="여자"
+                android:textSize="17sp" />
+
+        </LinearLayout>
+
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guidelineL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.07" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guidelineR"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.93" />
+
+    </android.support.constraint.ConstraintLayout>
+</layout>

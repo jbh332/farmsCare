@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/ll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/circle_indicator"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.pm10.library.CircleIndicator
+            android:id="@+id/circle_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/btnJoin"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:p_defaultColor="@color/gray"
+            app:p_gap="4dp"
+            app:p_radius="4dp"
+            app:p_selectedColor="#b6addc"
+            app:p_strokeColor="@color/gray"
+            app:p_strokeWidth="1dp" />
+
+
+        <Button
+            android:id="@+id/btnJoin"
+            android:layout_width="210dp"
+            android:layout_height="55dp"
+            android:background="@drawable/button_highlight"
+            android:text="회원가입"
+            android:textColor="#FFFFFF"
+            android:textSize="25sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/guideline" />
+
+        <LinearLayout
+            android:id="@+id/textll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnJoin">
+
+            <TextView
+                android:id="@+id/tv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="이미 아이디가 있으신가요? "
+                android:textSize="17sp"
+                app:layout_constraintRight_toLeftOf="@+id/tv2" />
+
+            <TextView
+                android:id="@+id/tvLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="로그인"
+                android:textColor="#b6addc"
+                android:textSize="17sp"
+                app:layout_constraintLeft_toRightOf="@+id/tv1" />
+        </LinearLayout>
+
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.8" />
+
+
+    </android.support.constraint.ConstraintLayout>
+</layout>
+
+

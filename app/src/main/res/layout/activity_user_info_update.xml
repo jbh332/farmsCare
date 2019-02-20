@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/tBar"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="#add9dc">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:focusable="false"
+                    android:text="회원정보 수정"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+            </android.support.v7.widget.Toolbar>
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/civUserPicture"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:layout_marginTop="30dp"
+                android:src="@drawable/common1"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tBar" />
+
+            <TextView
+                android:id="@+id/tv"
+                android:text="사용자 이미지 변경은 메인탭에서 하실 수 있습니다."
+                android:textSize="13sp"
+                android:textColor="#e43c4d"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center_horizontal"
+                app:layout_constraintLeft_toLeftOf="@+id/guidelineL"
+                app:layout_constraintTop_toBottomOf="@+id/civUserPicture"
+                app:layout_constraintRight_toRightOf="@+id/guidelineR"/>
+
+
+            <ImageView
+                android:id="@+id/ivCheckID"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="60dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_check_gray"
+                app:layout_constraintLeft_toRightOf="@+id/guidelineL"
+                app:layout_constraintTop_toBottomOf="@+id/tv" />
+
+
+            <TextView
+                android:id="@+id/tvUserID"
+                android:layout_width="60dp"
+                android:layout_height="0dp"
+                android:gravity="center_vertical"
+                android:text="아이디 : "
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/ivCheckID"
+                app:layout_constraintLeft_toRightOf="@+id/ivCheckID"
+                app:layout_constraintTop_toTopOf="@+id/ivCheckID" />
+
+            <TextView
+                android:id="@+id/tvID"
+                android:layout_width="0dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="20dp"
+                android:textSize="15sp"
+                app:layout_constraintLeft_toRightOf="@+id/tvUserID"
+                app:layout_constraintRight_toLeftOf="@id/guidelineR"
+                app:layout_constraintTop_toTopOf="@+id/tvUserID"
+                app:layout_constraintBottom_toBottomOf="@+id/tvUserID"
+                />
+
+
+            <ImageView
+                android:id="@+id/ivCheckNicName"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="25dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_check_gray"
+                app:layout_constraintLeft_toRightOf="@+id/guidelineL"
+                app:layout_constraintTop_toBottomOf="@+id/tvID" />
+
+            <TextView
+                android:id="@+id/tvUserNicName"
+                android:layout_width="60dp"
+                android:layout_height="0dp"
+                android:gravity="center_vertical"
+                android:text="닉네임 : "
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/ivCheckNicName"
+                app:layout_constraintLeft_toRightOf="@+id/ivCheckNicName"
+                app:layout_constraintTop_toTopOf="@+id/ivCheckNicName" />
+
+            <TextView
+                android:id="@+id/tvNicName"
+                android:layout_width="0dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="20dp"
+                android:textSize="15sp"
+                app:layout_constraintLeft_toRightOf="@+id/tvUserNicName"
+                app:layout_constraintRight_toLeftOf="@+id/btnNicNameChange"
+                app:layout_constraintTop_toTopOf="@+id/tvUserNicName"
+                app:layout_constraintBottom_toBottomOf="@+id/tvUserNicName"/>
+
+            <Button
+                android:id="@+id/btnNicNameChange"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/mainColor"
+                android:text="변경하기"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp"
+                app:layout_constraintLeft_toRightOf="@+id/tvNicName"
+                app:layout_constraintRight_toLeftOf="@+id/guidelineR"
+                app:layout_constraintTop_toTopOf="@+id/tvNicName"
+                app:layout_constraintBottom_toBottomOf="@+id/tvNicName"/>
+
+            <ImageView
+                android:id="@+id/ivCheckPW"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="25dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_check_gray"
+                app:layout_constraintLeft_toRightOf="@+id/guidelineL"
+                app:layout_constraintTop_toBottomOf="@+id/tvNicName" />
+
+            <TextView
+                android:id="@+id/tvUserPW"
+                android:layout_width="60dp"
+                android:layout_height="0dp"
+                android:gravity="center_vertical"
+                android:text="비밀번호"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/ivCheckPW"
+                app:layout_constraintLeft_toRightOf="@+id/ivCheckPW"
+                app:layout_constraintTop_toTopOf="@+id/ivCheckPW" />
+
+            <Button
+                android:id="@+id/btnPWChange"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/mainColor"
+                android:text="변경하기"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp"
+                app:layout_constraintLeft_toLeftOf="@+id/btnNicNameChange"
+                app:layout_constraintRight_toRightOf="@+id/btnNicNameChange"
+                app:layout_constraintTop_toTopOf="@+id/tvUserPW"
+                app:layout_constraintBottom_toBottomOf="@+id/tvUserPW"/>
+
+            <Button
+                android:id="@+id/btnRegister2"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/button_highlight"
+                android:text="수정 완료"
+                android:textColor="#ffffff"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toRightOf="@+id/guidelineL"
+                app:layout_constraintRight_toLeftOf="@+id/guidelineR"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+            <android.support.constraint.Guideline
+                android:id="@+id/guidelineL"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.07" />
+
+            <android.support.constraint.Guideline
+                android:id="@+id/guidelineR"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.93" />
+
+        </android.support.constraint.ConstraintLayout>
+</layout>

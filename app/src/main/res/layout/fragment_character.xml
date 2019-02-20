@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.hong.boaaproject.characterActivity.CharacterFragment">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/LL0"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:background="@drawable/background_farm"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/ivCharacter"
+                android:layout_width="220dp"
+                android:layout_height="220dp"
+                android:background="@drawable/character"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/ivWear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="40dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="@+id/ivCharacter"
+                app:layout_constraintRight_toRightOf="@+id/ivCharacter"
+                app:layout_constraintTop_toTopOf="@+id/ivCharacter" />
+
+            <ImageView
+                android:id="@+id/ivWear2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="40dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="@+id/ivCharacter"
+                app:layout_constraintRight_toRightOf="@+id/ivCharacter"
+                app:layout_constraintTop_toTopOf="@+id/ivCharacter" />
+
+            <ImageView
+                android:id="@+id/ivWear3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="40dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="@+id/ivCharacter"
+                app:layout_constraintRight_toRightOf="@+id/ivCharacter"
+                app:layout_constraintTop_toTopOf="@+id/ivCharacter" />
+
+
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/LL1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/LL0">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="인벤토리로 이동 >"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </android.support.constraint.ConstraintLayout>
+    </android.support.constraint.ConstraintLayout>
+</layout>

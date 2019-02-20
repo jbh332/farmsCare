@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF">
+
+        <com.victor.loading.rotate.RotateLoading xmlns:cus="http://schemas.android.com/tools"
+            android:id="@+id/rotateloading"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerInParent="true"
+            app:layout_constraintBottom_toBottomOf="@+id/btnLogin"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintLeft_toLeftOf="@+id/guidelineL"
+            app:layout_constraintRight_toRightOf="@+id/guidelineR"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.752"
+            app:loading_color="@color/mainColor"
+            cus:loading_width="5dp" />
+
+        <ImageView
+            android:id="@+id/Img"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/logo2"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.40" />
+
+        <ImageView
+            android:id="@+id/ivCheckID"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_check_gray"
+            app:layout_constraintLeft_toRightOf="@+id/guidelineL"
+            app:layout_constraintTop_toBottomOf="@+id/guideline1" />
+
+        <TextView
+            android:id="@+id/tvID"
+            android:layout_width="50dp"
+            android:layout_height="0dp"
+            android:gravity="center_vertical"
+            android:text="아이디"
+            android:textColor="#000000"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/ivCheckID"
+            app:layout_constraintLeft_toRightOf="@+id/ivCheckID"
+            app:layout_constraintTop_toTopOf="@+id/ivCheckID" />
+
+        <EditText
+            android:id="@+id/etID"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/border_underline"
+            android:hint="아이디를 입력하세요"
+            android:text=""
+            android:textSize="15sp"
+            app:layout_constraintLeft_toRightOf="@+id/guidelineL"
+            app:layout_constraintRight_toLeftOf="@+id/guidelineR"
+            app:layout_constraintTop_toBottomOf="@+id/ivCheckID" />
+
+        <ImageView
+            android:id="@+id/ivCheckPassword"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="10dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_check_gray"
+            app:layout_constraintLeft_toRightOf="@+id/guidelineL"
+            app:layout_constraintTop_toBottomOf="@+id/etID" />
+
+        <TextView
+            android:id="@+id/tvPassword"
+            android:layout_width="70dp"
+            android:layout_height="0dp"
+            android:gravity="center_vertical"
+            android:text="비밀번호"
+            android:textColor="#000000"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/ivCheckPassword"
+            app:layout_constraintLeft_toRightOf="@+id/ivCheckPassword"
+            app:layout_constraintTop_toTopOf="@+id/ivCheckPassword" />
+
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/border_underline"
+            android:hint="8~20자리 영문, 숫자 조합"
+            android:inputType="textPassword"
+            android:text=""
+            android:textSize="15sp"
+            app:layout_constraintLeft_toRightOf="@+id/guidelineL"
+            app:layout_constraintRight_toLeftOf="@+id/guidelineR"
+            app:layout_constraintTop_toBottomOf="@+id/ivCheckPassword" />
+
+        <Button
+            android:id="@+id/btnLogin"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/button_highlight"
+            android:text="LOG IN"
+            android:textColor="#ffffff"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toRightOf="@+id/guidelineL"
+            app:layout_constraintRight_toLeftOf="@+id/guidelineR"
+            app:layout_constraintTop_toBottomOf="@+id/etPassword" />
+
+        <View
+            android:id="@+id/lineH1"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="30dp"
+            android:background="#dddddd"
+            app:layout_constraintLeft_toRightOf="@+id/guidelineL"
+            app:layout_constraintRight_toLeftOf="@+id/btnFindPassword"
+            app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
+
+        <TextView
+            android:id="@+id/btnFindPassword"
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="비밀번호 찾기"
+            android:textColor="#999999"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/lineH1"
+            app:layout_constraintLeft_toRightOf="@+id/lineH1"
+            app:layout_constraintRight_toLeftOf="@+id/lineH2"
+            app:layout_constraintTop_toTopOf="@+id/lineH1" />
+
+        <View
+            android:id="@+id/lineH2"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="#dddddd"
+            app:layout_constraintBottom_toBottomOf="@+id/lineH1"
+            app:layout_constraintLeft_toRightOf="@+id/btnFindPassword"
+            app:layout_constraintRight_toLeftOf="@+id/guidelineR"
+            app:layout_constraintTop_toTopOf="@+id/lineH1" />
+
+        <Button
+            android:id="@+id/btnRegister"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/border_gray_fill_white"
+            android:enabled="true"
+            android:text="회원가입"
+            android:textColor="#999999"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toRightOf="@+id/guidelineL"
+            app:layout_constraintRight_toLeftOf="@+id/guidelineR"
+            app:layout_constraintTop_toBottomOf="@+id/lineH1" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guidelineL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.1" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guidelineR"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.9" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</layout>

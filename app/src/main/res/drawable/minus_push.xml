@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--마이너스버튼 눌렀을 경우 이미지 변경-->
+    <item android:state_pressed="true"
+
+        android:drawable="@drawable/minus_pushbt"/>
+
+    <item android:drawable="@drawable/minus" />
+</selector>

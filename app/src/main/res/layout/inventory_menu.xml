@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bottom_sheet"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#A9F5D0"
+    android:orientation="vertical"
+    >
+
+    <TextView
+        android:text="메뉴"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="#2EFE9A"
+        android:gravity="center"
+        android:textColor="#FFFFFF" />
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:columnCount="2">
+
+        <ImageButton
+            android:id="@+id/m_hat"
+            android:layout_columnWeight="1"
+            android:background="@android:color/transparent"
+            android:layout_margin="15dp" />
+
+        <ImageButton
+            android:id="@+id/m_wears"
+            android:layout_columnWeight="1"
+            android:background="@android:color/transparent"
+            android:layout_margin="15dp"/>
+
+        <ImageButton
+            android:id="@+id/m_shoes"
+            android:layout_columnWeight="1"
+            android:background="@android:color/transparent"
+            android:layout_margin="15dp"/>
+
+        <ImageButton
+            android:id="@+id/m_boxs"
+            android:layout_columnWeight="1"
+            android:background="@android:color/transparent"
+            android:layout_margin="15dp"/>
+
+    </GridLayout>
+
+</LinearLayout>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.hong.boaaproject">
+
+    <!-- 식품안전나라 API 연동 퍼미션 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-feature android:name="android.hardware.camera2"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/fams"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".firstActivity.FindPasswordActivity" />
+        <activity android:name=".firstActivity.FindPasswordActivity2" />
+        <activity android:name=".firstActivity.LoginActivity" />
+        <activity android:name=".firstActivity.RegisterActivity" />
+        <activity android:name=".communityActivity.WritingActivity"/>
+        <activity android:name=".communityActivity.CommentListActivity"/>
+        <activity android:name=".characterActivity.InventoryActivity"/>
+        <activity
+            android:name=".firstActivity.IndexActivity"
+            android:exported="true" />
+        <activity
+            android:name=".mainActivity.MainActivity"
+            android:exported="true" />
+        <activity android:name=".menu.UserInfoUpdateActivity" />
+        <activity android:name=".menu.Helper" />
+        <activity android:name=".mainActivity.calorie.CalorieTab" />
+        <activity android:name=".mainActivity.calorie.SearchCalorieActivity" />
+        <activity android:name=".mainActivity.water.WaterTab" />
+        <activity android:name=".mainActivity.sleep.SleepTab" />
+        <activity android:name=".mainActivity.walk.WalkTab" />
+
+        <!-- 스플래시 액티비티 -->
+        <activity
+            android:name=".SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".mainActivity.Register2Activty" />
+        <activity
+            android:name=".mainActivity.Register2Activity"
+            android:label="@string/title_activity_register2"
+            android:theme="@style/AppTheme" />
+
+        // provider : 앱과 앱과의 데이터를 주고 받기 위한 규약 및 컴포넌트
+        <provider
+            android:authorities="com.example.hong.boaaproject"
+            android:name="android.support.v4.content.FileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+    </application>
+
+</manifest>
